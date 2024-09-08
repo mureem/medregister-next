@@ -1,0 +1,93 @@
+/* app/components/Navbar.module.css */
+.navbar {
+    position: fixed;
+    font-family: 'Merriweather', serif;
+    background-color: #0d9488;
+    color: #F8F9FA;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Добавлена тень */
+}
+
+
+.navbarBrand {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+.profileButton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px; /* Внутренний отступ для кнопки */
+    border-radius: 8px; /* Закругленные углы */
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.profileButton:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Легкое изменение цвета фона при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для выделения */
+}
+
+.profileButton:active {
+    background-color: rgba(0, 0, 0, 0.3); /* Затемнение фона при нажатии */
+    transform: scale(0.98); /* Небольшое уменьшение размера для эффекта нажатия */
+}
+
+.icon {
+    margin-right: 8px; /* Space between icon and text */
+    width: 20px; /* 20% larger than the original size */
+    height: 20px; /* 20% larger than the original size */
+}
+
+
+/* Dropdown menu styles */
+.dropdownMenu {
+    position: absolute;
+    top: 50px; /* Dropdown menu below the button */
+    right: 0;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 150px;
+    padding: 10px;
+}
+
+.dropdownMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdownMenu li {
+    padding: 6px 0; /* Adjusted padding for smaller font */
+    display: flex;
+    align-items: center;
+}
+
+.dropdownMenu li a {
+    color: black;
+    text-decoration: none;
+    font-size: 12px; /* Adjusted font size to be smaller */
+    display: flex;
+    align-items: center;
+}
+
+.dropdownMenu li a:hover {
+    text-decoration: underline;
+}
+
+.dropdownMenu li a .icon {
+    margin-right: 8px; /* Space between icon and text */
+}
